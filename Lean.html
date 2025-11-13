@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metodología Lean</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div>
+                <h1>Metodología Lean</h1>
+                <p class="header-subtitle">Eliminación de desperdicios y maximización de valor</p>
+            </div>
+            <div style="display: flex; gap: 0.5rem;">
+                <button class="theme-toggle" id="theme-toggle" onclick="toggleTheme()">
+                    <span>🌙</span> <span>Oscuro</span>
+                </button>
+                <button class="menu-toggle" onclick="toggleMenu()">≡</button>
+            </div>
+        </div>
+        <nav id="nav">
+            <ul>
+                <li><a href="agil.html">Ágil</a></li>
+                <li><a href="DevOps.html">DevOps</a></li>
+                <li><a href="Kanban.html">Kanban</a></li>
+                <li><a href="Lean.html">Lean</a></li>
+                <li><a href="Waterfall.html">Waterfall</a></li>
+                <li><a href="views/scrum.html">Scrum</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <a href="index.html" class="back-button">
+                <span class="back-button-icon">←</span>
+                <span>Volver al inicio</span>
+            </a>
+        </section>
+
+        <section>
+            <div class="card">
+                <div class="content-with-image">
+                    <div class="content-text">
+                        <h2>¿Qué es Lean?</h2>
+                        <p class="text-justify">La <strong>Metodología Lean</strong> es un enfoque sistemático para identificar y eliminar desperdicios (muda) en los procesos, maximizando el valor entregado al cliente mientras se minimiza el uso de recursos. Originada en el Sistema de Producción de Toyota (TPS) en la década de 1950, Lean se ha expandido más allá de la manufactura para aplicarse en desarrollo de software, servicios, salud y otros sectores.</p>
+                        <p class="text-justify">La filosofía central de Lean es simple pero poderosa: <em>"Hacer más con menos"</em>. Se enfoca en eliminar todo lo que no agrega valor directo al cliente final, optimizando así los procesos y mejorando la eficiencia general.</p>
+                    </div>
+                    <div class="image-wrapper">
+                        <img src="img/lean.svg" alt="Diagrama de Metodología Lean - Principios y Desperdicios">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="card">
+                <h2>Los Cinco Principios Fundamentales de Lean</h2>
+                <p class="text-justify">Lean se basa en cinco principios fundamentales que guían la transformación de procesos:</p>
+                
+                <div class="fase">
+                    <h3>1. Identificar el Valor</h3>
+                    <p>El valor se define desde la perspectiva del cliente. Solo el cliente puede determinar qué es valioso y está dispuesto a pagar por ello. Todo lo demás es desperdicio y debe ser eliminado o minimizado.</p>
+                </div>
+
+                <div class="fase">
+                    <h3>2. Mapear el Flujo de Valor</h3>
+                    <p>Consiste en identificar y documentar todos los pasos del proceso, desde la materia prima hasta el producto final entregado al cliente. Esto permite visualizar el flujo completo y detectar actividades que no agregan valor.</p>
+                </div>
+
+                <div class="fase">
+                    <h3>3. Crear Flujo Continuo</h3>
+                    <p>Una vez identificados los desperdicios, se reorganiza el proceso para que el trabajo fluya sin interrupciones, esperas o cuellos de botella. El objetivo es que el valor fluya continuamente hacia el cliente.</p>
+                </div>
+
+                <div class="fase">
+                    <h3>4. Establecer un Sistema Pull (Jalar)</h3>
+                    <p>En lugar de "empujar" productos al mercado (push), Lean utiliza un sistema "pull" donde la producción se activa solo cuando hay demanda real del cliente. Esto evita sobreproducción e inventarios excesivos.</p>
+                </div>
+
+                <div class="fase">
+                    <h3>5. Buscar la Perfección (Kaizen)</h3>
+                    <p>Lean es un proceso de mejora continua. La perfección nunca se alcanza completamente, pero se busca constantemente mediante pequeños cambios incrementales que eliminan desperdicios y mejoran la eficiencia.</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="card">
+                <h2>Los 7 Tipos de Desperdicios (Muda)</h2>
+                <p class="text-justify">Lean identifica siete tipos principales de desperdicios que deben ser eliminados:</p>
+                <ul>
+                    <li><strong>Sobreproducción:</strong> Producir más de lo necesario o antes de que se necesite. Es considerado el peor desperdicio porque genera todos los demás.</li>
+                    <li><strong>Espera:</strong> Tiempo de inactividad de personas, máquinas o materiales esperando el siguiente paso del proceso.</li>
+                    <li><strong>Transporte:</strong> Movimiento innecesario de materiales, productos o información de un lugar a otro.</li>
+                    <li><strong>Sobreprocesamiento:</strong> Realizar más trabajo del necesario o usar herramientas más complejas de las requeridas.</li>
+                    <li><strong>Inventario:</strong> Exceso de materias primas, trabajo en proceso o productos terminados que no se están utilizando.</li>
+                    <li><strong>Movimiento:</strong> Movimientos innecesarios de personas o equipos que no agregan valor al producto.</li>
+                    <li><strong>Defectos:</strong> Productos o servicios defectuosos que requieren corrección, retrabajo o descarte, generando costos adicionales.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <div class="card">
+                <h2>Herramientas y Técnicas Lean</h2>
+                <p class="text-justify">Lean utiliza diversas herramientas para identificar y eliminar desperdicios:</p>
+                <ul>
+                    <li><strong>Value Stream Mapping (VSM):</strong> Diagrama visual que mapea el flujo de valor desde la materia prima hasta el cliente, identificando desperdicios y oportunidades de mejora.</li>
+                    <li><strong>5S:</strong> Metodología de organización del lugar de trabajo: Seiri (Clasificar), Seiton (Ordenar), Seiso (Limpiar), Seiketsu (Estandarizar) y Shitsuke (Mantener).</li>
+                    <li><strong>Kanban:</strong> Sistema visual de gestión que controla el flujo de trabajo y limita el trabajo en progreso.</li>
+                    <li><strong>Just-in-Time (JIT):</strong> Producción de solo lo necesario, cuando se necesita y en la cantidad exacta requerida.</li>
+                    <li><strong>Kaizen:</strong> Mejora continua mediante pequeños cambios incrementales realizados por todos los miembros de la organización.</li>
+                    <li><strong>Poka-Yoke:</strong> Mecanismos de prevención de errores que hacen imposible o muy difícil cometer un error.</li>
+                    <li><strong>Jidoka:</strong> Autonomización con toque humano: máquinas que se detienen automáticamente cuando detectan un problema.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <div class="card">
+                <h2>Aplicación de Lean en Desarrollo de Software</h2>
+                <p class="text-justify">En el contexto del desarrollo de software, Lean se traduce en:</p>
+                <ul>
+                    <li><strong>Eliminar código innecesario:</strong> No desarrollar funcionalidades que el cliente no necesita o no usará.</li>
+                    <li><strong>Reducir tiempos de espera:</strong> Minimizar el tiempo entre la solicitud de una funcionalidad y su entrega al cliente.</li>
+                    <li><strong>Eliminar retrabajo:</strong> Prevenir defectos desde el inicio mediante pruebas tempranas y código de calidad.</li>
+                    <li><strong>Optimizar el flujo de trabajo:</strong> Usar metodologías ágiles como Scrum o Kanban para mantener un flujo continuo de valor.</li>
+                    <li><strong>Mejora continua:</strong> Retrospectivas regulares para identificar y eliminar desperdicios en el proceso de desarrollo.</li>
+                    <li><strong>Entregas frecuentes:</strong> Liberar software funcional en ciclos cortos para obtener feedback temprano del cliente.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <div class="card">
+                <h2>Beneficios de Implementar Lean</h2>
+                <p class="text-justify">Las organizaciones que implementan Lean experimentan múltiples beneficios:</p>
+                <ul>
+                    <li><strong>Reducción de costos:</strong> Al eliminar desperdicios, se reducen los costos operativos y se optimiza el uso de recursos.</li>
+                    <li><strong>Mejora en la calidad:</strong> Al enfocarse en hacer las cosas bien desde el inicio, se reducen defectos y retrabajos.</li>
+                    <li><strong>Mayor velocidad:</strong> Los procesos optimizados permiten entregar valor al cliente más rápidamente.</li>
+                    <li><strong>Mejor satisfacción del cliente:</strong> Al entregar exactamente lo que el cliente necesita, cuando lo necesita, se mejora la satisfacción.</li>
+                    <li><strong>Mayor flexibilidad:</strong> Los procesos Lean son más ágiles y pueden adaptarse rápidamente a cambios en la demanda.</li>
+                    <li><strong>Cultura de mejora continua:</strong> Lean fomenta una mentalidad de mejora constante en toda la organización.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <div class="card">
+                <h2>Relación con Otras Metodologías</h2>
+                <p class="text-justify">Lean se complementa perfectamente con otras metodologías modernas:</p>
+                <ul>
+                    <li><strong>Lean + Agile:</strong> Lean proporciona los principios de eliminación de desperdicios, mientras que Agile proporciona el marco para la entrega iterativa e incremental.</li>
+                    <li><strong>Lean + DevOps:</strong> Lean elimina desperdicios en el proceso de desarrollo y operaciones, mientras DevOps automatiza y acelera la entrega.</li>
+                    <li><strong>Lean + Scrum:</strong> Scrum implementa los principios Lean mediante sprints cortos, retrospectivas (Kaizen) y enfoque en valor del cliente.</li>
+                    <li><strong>Lean + Kanban:</strong> Kanban es una herramienta Lean que visualiza el flujo de trabajo y limita el trabajo en progreso para evitar desperdicios.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <div class="card">
+                <h2>Conclusión</h2>
+                <p class="text-justify">La Metodología Lean es más que un conjunto de herramientas; es una filosofía de trabajo que busca la excelencia operativa mediante la eliminación sistemática de desperdicios y la maximización del valor para el cliente. Su aplicación en desarrollo de software, combinada con metodologías ágiles, permite crear productos de mayor calidad, más rápido y con menos recursos, mejorando tanto la satisfacción del cliente como la eficiencia de la organización.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 - Todos los derechos reservados a MGAA</p>
+    </footer>
+
+    <script src="js/theme.js"></script>
+</body>
+</html>
+
